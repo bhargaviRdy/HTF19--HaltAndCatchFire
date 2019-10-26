@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Halt & Catch Fire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/main.css' %}" />
+    <script src="main.js"></script>
+  </head>
+  <body style="background-color: #f3f7f7;">
+    <div class="jumbotron jumbotron-fluid" style="background-image: url('https://cdn.pixabay.com/photo/2019/03/18/13/40/eye-4063134_960_720.jpg'); background-repeat: no-repeat; background-size: cover">
+
+      <div class="container">
+        <h1 class="display-4 title-name" style="color: white">
+          Startup Info System
+        </h1>
+        <p class="lead" style="color: white">
+          &nbsp;&nbsp;&nbsp;&nbsp;Explore Your Interest
+        </p>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-9">
+            {% for i in startups %}
+          <div class="card rounded shadow p-3 mb-5 bg-white rounded">
+            <div class="row ">
+              <div class="col-md-4">
+                <img
+                  src="{{ i.pic.url }}" alt="img"
+                  class="w-75"
+                />
+              </div>
+
+              <div class="col-md-8 px-3">
+                <div class="card-block px-3">
+                  <h4 class="card-title">{{ i.title }}</h4>
+                  <p class="card-text">
+                   {{ i.content }}
+                  </p>
+                  <!-- <a href="#" class="btn submit-button ">Apply Here</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+         
+          {% endfor %}
+        </div>
+        <div class="col-6 col-md-1"></div>
+        <div class="col-6 col-md-2">
+          <form method="POST" action="/filter/">
+            {% csrf_token %}
+            <h5 style="color: #000">Location</h5>
+            <hr />
+            <div class="checkbox">
+              <label><input type="checkbox" value="Hyderabad" name="cities[]"/>&nbsp;Hyderabad</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="Banglore" name="cities[]"/>&nbsp;Banglore</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="Pune" name="cities[]" />&nbsp;Pune</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="Chennai" name="cities[]"/>&nbsp;Chennai</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" value="Delhi" name="cities[]"/>&nbsp;Delhi</label>
+                </div>
+            <br />
+            <h5 style="color: #000">Technology</h5>
+            <hr />
+            <div class="checkbox">
+                <label><input type="checkbox" value="Machine Learning" name="tech[]" autocomplete="off"/>&nbsp;Machine Learning</label>
+              </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="IT" name="tech[]"/>&nbsp;IT</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="Blockchain" name="tech[]"/>&nbsp;Blockchain</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="IoT" name="tech[]"/>&nbsp;IoT</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="Web development" name="tech[]" />&nbsp;Web development</label>
+              </div>
+
+              <input style="margin-top: 25px;"class="btn  submit-button" type="submit" value="Apply" >
+          </form >
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

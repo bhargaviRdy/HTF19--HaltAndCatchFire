@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Halt & Catch Fire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/homemain.css' %}">
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <div
+        class="view"
+        style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;"
+      >
+        <div class="mask rgba-black-light align-items-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 mb-4 white-text text-center">
+                <h1 class="h1-reponsive" data-wow-delay="0.3s">
+                  <Strong>Startup Info System</Strong>
+                </h1>
+                <hr
+                  class="hr-light my-4 wow fadeInDown"
+                  data-wow-delay="0.4s"
+                />
+                <!-- <br /> -->
+                <h3 class="sub-head" data-wow-delay="0.4s">
+                  Explore Your Interest
+                </h3>
+                <br />
+                <a
+                  href="/login/"
+                  class="Login"
+                  style="color: black; font-size: 20px"
+                  class="btn"
+                  data-wow-delay="0.4s"
+                  >Login</a
+                >
+                <a
+                  href="/register/"
+                  class="Signup"
+                  style="color: black; font-size: 20px"
+                  class="btn "
+                  data-wow-delay="0.4s"
+                  >Signup</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

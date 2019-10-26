@@ -1,0 +1,68 @@
+html,
+body,
+header,
+.view {
+  height: 100%;
+  /* margin-top: 100px; */
+}
+
+header h1 {
+  margin-top: 170px;
+  font-family: "Open Sans";
+  font-size: 50px;
+}
+
+.sub-head {
+  font-size: 20px;
+  font-family: "Open Sans";
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
+}
+
+h1 {
+  letter-spacing: 4px;
+  color: black;
+}
+
+h3 {
+  letter-spacing: 2px;
+  color: black;
+  font-size: 40px;
+}
+
+.hr-light {
+  border-top: 3px solid black;
+  width: 80px;
+}
+
+.Login,
+.Signup {
+  border: 2px solid #000;
+  /* opacity: 0.8; */
+  margin-top: 20px;
+  padding: 10px 30px;
+}
+
+.Login {
+  margin-right: 25px;
+}
+
+.Signup {
+  margin-left: 15px;
+}
+
+.Login:hover {
+  /* text-decoration: none; */
+  /* opacity: 0.5; */
+  /* padding: 20px 30px; */
+  /* color: ; */
+  /* background-color: black; */
+  /* border: 2px solid #222; */
+}

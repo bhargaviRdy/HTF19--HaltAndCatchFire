@@ -1,0 +1,30 @@
+body {
+background-color: #b7bdb9;
+}
+
+/* .title-name { */
+/* color: white !important; */
+/* font-weight: 50px; */
+/* font-display: bold; */
+/* } */
+
+.rounded {
+  border-radius: 1rem !important;
+}
+
+.submit-button {
+  position: relative;
+  background: none;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 0.2em solid #171621;
+  padding: 0.5em 1em;  
+}
+
+.submit-button:hover {
+  color: white;
+  background-color: #171621;
+  /* opacity: 0.9; */
+}
+
